@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos los Datos</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body.dark-mode {
+            background-color: #1a202c;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        footer {
+            padding: 1em 0;
+            margin-top: auto;
+        }
+
+        .dark-mode th,
+        .dark-mode td {
+            color: white;
+        }
+
+        .dark-mode .bg-white {
+            background-color: #2d3748;
+        }
+
+        .dark-mode .border {
+            border-color: #4a5568;
+        }
+
+        /* Estilos para la barra de navegación en modo oscuro */
+        .navbar.dark-mode {
+            background-color: #2d3748;
+            color: white;
+        }
+
+        /* Estilos para el contenedor de la tabla */
+        .table-container {
+            max-height: calc(100vh - 140px);
+            /* Altura máxima del contenedor */
+            overflow-y: auto;
+            /* Habilita el scroll vertical */
+            border-radius: 10px;
+            /* Borde redondeado */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            /* Sombras */
+            overflow-x: hidden;
+            /* Oculta el scroll horizontal */
+        }
+
+        /* Estilos para el footer */
+    </style>
+</head>
+
+<body class="bg-gray-100 light-mode">
+    <nav id="navbar" class="navbar bg-blue-500 p-0.5 flex justify-between items-center">
+        <button id="themeToggle" class="text-white p-2 focus:outline-none" data-theme="light">🌙</button>
+
+        <h1 class="text-xl font-semibold ml-2">CuCuota</h1>
+        <ul class="flex space-x-4">
+            <li><a href="/index.html" class="text-white">Home</a></li>
+            <li><a href="/src/todos-los-datos.html" class="text-white">Datos</a></li>
+        </ul>
+    </nav>
+
+    <div class=" p-0 mx-auto mt-4 sm:w-2/3 md:w-3/4 lg:w-2/3 xl:w-1/2 w-full">
+        <h2 class="text-lg font-semibold mb-4 ">Todos los Usuarios</h2>
+        <div class="table-container "> <!-- Contenedor de la tabla -->
+            <table class="w-full  bg-white border rounded-lg text-sm sm:text-base md:text-lg lg:text-base">
+                <thead class="bg-blue-500 text-white">
+                    <tr>
+                        <th class="border p-2">Nombre</th>
+                        <th class="border p-2">Consumido</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-body" class="border-b-8 divide-y divide-gray-200">
+                    <!-- Lista de usuarios ordenados de mayor a menor consumo -->
+                    <!-- Repetir este bloque para más usuarios si es necesario -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 p-0.5 text-white ">
+        <div class="container mx-auto text-center">
+            <p>Contenido de contacto</p>
+            <p>Creado por: Tu Nombre</p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="/src/theme-toggle.js"></script>
+    <script src="/src/all-data.js"></script>
+
+</body>
+
+</html>

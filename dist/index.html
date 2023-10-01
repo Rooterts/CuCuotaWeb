@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Agrega el enlace a Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Estilos personalizados (puedes reemplazarlos con clases de Tailwind CSS) */
+        body.dark-mode {
+            background-color: #1a202c;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        footer {
+            padding: 1em 0;
+            margin-top: auto;
+        }
+
+        .dark-mode th,
+        .dark-mode td {
+            color: white;
+        }
+
+        .dark-mode .bg-white {
+            background-color: #2d3748;
+        }
+
+        .dark-mode .border {
+            border-color: #4a5568;
+        }
+
+        /* Ajustar el tamaño de la tabla y la gráfica en dispositivos de escritorio */
+        @media screen and (min-width: 768px) {
+            .table-container {
+                max-height: 400px;
+                /* Ajusta la altura máxima de la tabla */
+                overflow-y: auto;
+            }
+
+            #myChart {
+                max-height: 300px;
+                /* Ajusta la altura máxima de la gráfica */
+            }
+        }
+
+        /* Ajustar el tamaño del footer en dispositivos móviles */
+        /* @media screen and (max-width: 640px) {
+            footer {
+                padding: 16px;
+                /* Reduce el padding del footer en dispositivos móviles 
+            }
+        } 
+        
+        /* Ajustar el tamaño del footer en dispositivos de escritorio */
+        /* @media screen and (min-width: 768px) {
+            footer {
+                padding: 16px;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+        }*/
+    </style>
+</head>
+
+<body class="bg-gray-100 light-mode ">
+    <!-- Barra de Navegación -->
+    <header class="">
+        <nav class="bg-blue-500 p-0.5 flex justify-between items-center">
+            <button id="themeToggle" class="text-white p-2 focus:outline-none" data-theme="light">🌙</button>
+            <h1 class="text-xl font-semibold ml-2">CuCuota</h1>
+            <ul class="flex space-x-4">
+                <li><a href="/index.html" class="text-white">Home</a></li>
+                <li><a href="/src/todos-los-datos.html" class="text-white">Datos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido Principal -->
+    <div class="container mx-auto mt-4">
+        <!-- Sección de Tabla de Usuarios y Consumo -->
+        <section class="w-full p-4 bg-white rounded-lg shadow-lg">
+            <h2 class="text-lg font-semibold mb-2">Top-10 usuarios con mayor consumo</h2>
+            <div class="overflow-x-auto table-container">
+                <table class="w-full bg-white border rounded-lg text-lg">
+                    <thead class="bg-blue-500 text-white">
+                        <tr>
+                            <th class="border p-2">Nombre</th>
+                            <th class="border p-2">Consumido</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-body">
+                        <!-- Lista de usuarios ordenados de mayor a menor consumo -->
+                        <!-- Repetir este bloque para más usuarios si es necesario -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección de Gráfica -->
+        <section class="w-full  p-10 bg-white rounded-lg shadow-lg mt-12">
+            <h2 class="text-lg font-semibold mb-2 text-center">GRAFICA</h2>
+            <canvas id="myChart" style="max-height: 238px; margin: 0 auto;"></canvas>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900  text-white p-0.5">
+        <div class="container mx-auto text-center">
+            <p>Contactame en <a href="https://t.me/Rooterts" class="text-blue-600">Telegram</a></p>
+            <p>Creado por:<a href="https://github.com/Rooterts" class="text-green-600"> Rooterts</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/src/theme-toggle.js"></script>
+    <script src="/src/main.js"></script>
+</body>
+
+</html>

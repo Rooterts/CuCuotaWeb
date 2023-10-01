@@ -1,0 +1,46 @@
+/* styles.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Agrega tus estilos personalizados debajo de las importaciones de Tailwind CSS */
+/* Estilos para el tema claro */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Estilos para el tema oscuro */
+.dark-mode {
+  background-color: #1a202c;
+  color: white;
+}
+
+/* Agrega cualquier otro estilo específico para los temas aquí */
+/* Estilos para el botón de cambio de tema */
+#themeToggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para el ícono del bombillo o sol */
+#icon {
+  margin-right: 0.5rem;
+}
+
+/* Estilos para la animación de carga */
+#animation {
+  animation: spin-slow 2s linear infinite;
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
