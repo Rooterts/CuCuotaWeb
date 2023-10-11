@@ -55,9 +55,6 @@ Para desplegar CuCuota en producción, necesitarás:
 }
  ```
 Por defecto buscara el localhost en el puerto 5173 bajo la ruta `/api/data`
-## Personalización 🎨
-
-Si deseas personalizar la apariencia o el comportamiento del sitio, puedes hacerlo modificando los estilos en la sección `<style>` del archivo HTML.
 
 ## Contacto 📞
 
