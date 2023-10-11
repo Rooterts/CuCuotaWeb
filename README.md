@@ -17,13 +17,13 @@ Para desplegar CuCuota en producción, necesitarás:
 1. Clona el repositorio de CuCuota desde GitHub:
 
    ```bash
-   git clone https://github.com/Rooterts/CuCuota.git
+   git clone https://github.com/Rooterts/CuCuotaWeb
    ```
 
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd CuCuota
+   cd CuCuotaWeb
    ```
 
 3. Instala las dependencias utilizando npm:
