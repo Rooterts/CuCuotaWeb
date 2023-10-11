@@ -8,7 +8,7 @@ CuCuotaWeb es un cliente web para el proyecto backend de [Cucuota](https://githu
 
 Para desplegar CuCuota en producción, necesitarás:
 - [Git](https://git-scm.com/) instalado en tu servidor.
-- [Node.js](https://nodejs.org/es) instalado en tu servidor.
+- [Node.js](https://nodejs.org/es) 15 o mayor instalado en tu servidor.
 - [Vite](https://vitejs.dev/) para compilar y desplegar la aplicación.
 - Acceso a un servidor o alojamiento web donde puedas desplegar la aplicación.
 
